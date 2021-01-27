@@ -1,0 +1,68 @@
+@import 'index.scss';
+
+.allParent{
+    background-color: $bgClr;
+    padding: 10px;
+}
+
+.searchFields{
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 8px;
+    h1{
+      font-size: 20px;
+      @include montserrat_bold;
+      color: $secondaryTextClr;
+      margin-bottom: 20px;
+    }
+    .addButton{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .textField{
+        width: 100%;
+        display: block;
+        @include montserrat_regular;
+        margin: 10px 0 15px 0 !important;
+        label{
+            color: $primaryTextClr !important;
+            font-size: 14px;
+            opacity: 0.75;
+            @include montserrat_bold;
+        }
+        input {
+            width: 100%;
+            border-radius: 4px;
+            font-size: 14px;
+            border: 1px solid #eee !important;
+            @include montserrat_regular;
+            &:disabled{
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.DialogHolder{
+    @include montserrat_regular;
+    width: 500px;
+    text-align: center;
+    font-size: 16px;
+    .DialogtextArea{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 10px 0px;
+        width: 80%;
+        @include montserrat_regular;
+        font-size: 16px;
+    }
+    .dropdown {
+        padding: 10px;
+    }
+    *{
+        @include montserrat_regular;
+    }
+}

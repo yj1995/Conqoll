@@ -1,0 +1,98 @@
+
+@import './font.scss';
+@import './color.scss';
+
+html, body{
+    margin: 0;
+    padding: 0;
+    @include montserrat_regular;
+    font-size: 14px;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    text-align: center;
+}
+
+.mainWrapper{
+    display: flex;
+    width: 100%;
+}
+
+.contentWrapper{
+    width: 87.5%;
+    position: relative;
+} 
+
+.leftNav{
+    background: #FFF;
+    position: relative;
+    height: 100%;
+    .leftNavTitle{
+        min-height: 0px !important;
+    }
+    .leftNavList{
+        margin: 0px;
+        color: $primaryClr;
+        box-shadow: none;
+        border-top: 1px solid #f4f8f9;
+        border-radius: 0px;
+        @include montserrat_bold;
+    }
+    ul.leftNavInnerList{
+        padding: 0px;
+        list-style: none;
+        margin: 0px;
+    }
+    li{
+        color: $primaryClr;
+        @include montserrat_semibold;
+        a{
+            padding: 5px 8px 8px 10px;
+            color: #629ccb;
+            text-decoration: none;
+            display: block;
+            min-width: 120px;
+            border-radius: 4px;
+            &:hover{
+                background: #f4f8f9;
+            }
+        }
+        &.activeLink{
+            background: #f4f8f9;
+        }
+    }   
+}
+
+.listHeader{
+    color: $secondaryTextClr;
+    font-size: 16px;
+    @include montserrat_bold;
+    padding: 30px 20px 20px 20px;
+    /* border-bottom: 1px solid #979797; */
+}
+
+.listHeaderTitle{
+    padding: 0px 10px;
+    word-wrap: break-word;
+    font-size: 15px;
+}
+
+.listItems{
+    padding: 25px 20px;
+    margin: 10px 0px;
+    align-items: center;
+    font-size: 16px;
+    color: $secondaryTextClr;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.actionButton{
+    justify-content: flex-end;
+    font-size: 16px !important;
+    font-family: "Montserrat", sans-serif !important;
+    margin-right: 5px !important;
+}
