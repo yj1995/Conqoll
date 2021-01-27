@@ -5,7 +5,9 @@ const app = express();
 const http = require('http').createServer(app);
 
 app.use(cors());
+alert(process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'production') {
+    alert('hiii')
     app.disable("x-powered-by")
     app.use(express.static(path.resolve(__dirname, './build')));
     app.get('*', (req, res) => {
